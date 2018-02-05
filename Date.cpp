@@ -112,7 +112,7 @@ Date::Date(int y, int m, int weekDay, int num) {
 	int mDays = Date::getMonthToDays(month) - Date::getMonthToDays(1);
 
 	// Jumping off point;
-	int start = yDays + mDays + 2; // 01/01/1901 was a Tuesday, hence 2 out of 0 - 6;
+	int start = yDays + mDays + 2; // 01/01/1901 was a Tuesday, hence 2 out of 0 to 6, inclusive;
 	
 	while (start >= 7) {
 		start -= 7;
