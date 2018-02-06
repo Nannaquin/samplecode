@@ -10,9 +10,12 @@
 #include "Date.h"
 using namespace std;
 
-
+//Creates a set of dates
+//Precondition: y > 1901
+//Postcondition: A set of dates corresponding to Turkey Day, Independence Day, and "School Day" (last monday in August) is created
 Holidays::Holidays(int y) {
 
+	
 	
 	year = y;
 	tDay = new Date(y, 11, 4, 4);
@@ -22,6 +25,9 @@ Holidays::Holidays(int y) {
 	return;
 }
 
+//Sets up a date for the User's birthday
+//Precondition: A valid Holidays object has been created.
+//Postcondition: A valid date is created.
 void Holidays::setBirthday() {
 	int y, m, d;
 	
@@ -37,6 +43,9 @@ void Holidays::setBirthday() {
 	return;
 }
 
+//Prints the dates in Holidays
+//Precondition: The Holidays constructor and Holidays::setBirthday have been successfully ran.
+//Postcondition: The dates of upcoming holidays will be printed.
 void Holidays::declareHolidays() {
 	
 	cout << "Independence Day will occur on " << *iDay << ", which is day " << iDay->modernTime() << " in modern time." << endl;
@@ -47,6 +56,9 @@ void Holidays::declareHolidays() {
 	return;
 }
 
+//Outputs the next holidays to occur
+//Precondition: inDate is a valid Date object
+//Postcondition: Displays an ordered list a dates that will occur next.
 void Holidays::nextHoliday(Date inDate) {
 	
 	int y;
