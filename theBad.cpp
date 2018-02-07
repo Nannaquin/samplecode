@@ -8,7 +8,8 @@
 #include "theBad.h"
 using namespace std;
 
-// Error Checking functions for the corresponding private members of Date.
+// Error Checking functions for the corresponding members of Date,
+// during Date's constructor.
 int BadYear::getYear() const { return year; }
 			
 int BadMonth::getMonth() const { return month; }
